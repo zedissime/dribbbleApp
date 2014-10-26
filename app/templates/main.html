@@ -1,0 +1,29 @@
+<ion-view hide-back-button="true" title="{{currentPage.name}}">
+  <ion-content padding="true" on-swipe="onSwipe($event)">
+	  <ion-refresher
+	    pulling-text="Pull to refresh..."
+	    on-refresh="doRefresh()">
+	  </ion-refresher>
+    <div class="list card" ng-repeat="shot in shotList" on-last-repeat="">
+  	  <div class="item item-avatar">
+  	    <img ng-src="{{shot.player.avatar_url}}">
+  	    <h2>{{shot.player.username}}</h2>
+  	    <p>{{shot.player.location}}</p>
+  	  </div>
+
+  	  <div class="item item-image">
+  	    <img ng-src="{{shot.image_url}}">
+  	  </div>
+
+  	  <a class="item item-icon-left" href="#" ng-click="goToUnique(shot)">
+  	    <i class="icon ion-ios7-eye"></i>
+  	    View this shot
+  	  </a>
+
+  	</div>
+    <ion-infinite-scroll
+      on-infinite="loadMore()"
+      distance="1%">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>
