@@ -1,5 +1,5 @@
 'use strict';
-angular.module('Booze.controllers', ['ionic'])
+angular.module('dribbbleApp.controllers', ['ionic'])
 
 .controller('MainCtrl', function($scope, $state, $http, $q) {
   $scope.viewList = {list: [

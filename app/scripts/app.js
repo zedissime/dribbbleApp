@@ -2,7 +2,7 @@
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
-angular.module('Booze', ['ionic', 'config', 'Booze.controllers', 'Booze.directives'])
+angular.module('dribbbleApp', ['ionic', 'config', 'dribbbleApp.controllers', 'dribbbleApp.directives'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

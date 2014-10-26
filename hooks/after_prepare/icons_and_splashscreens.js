@@ -20,7 +20,7 @@ var Orchestrator = require('orchestrator');
 
 var BASES = {
   android: 'res',
-  ios: 'Booze/Resources'
+  ios: 'dribbbleApp/Resources'
 };
 var RESOURCE_DIR = 'resources';
 
